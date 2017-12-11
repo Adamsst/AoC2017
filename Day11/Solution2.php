@@ -51,7 +51,10 @@ for($i=0;$i<count($input);$i++){
 echo $max;
 
 function getMax($n,$s,$e,$w,$max){
-	if ((abs($n - $s) + abs($e - $w)) > $max){
+	if((abs($e - $w) > abs($n - $s)) && ((abs($e - $w)*2) > $max)){
+		return (abs($e - $w)*2);
+	}
+	else if((abs($n - $s) + abs($e - $w)) > $max){
 		return (abs($n - $s) + abs($e - $w));
 	}
 	else{

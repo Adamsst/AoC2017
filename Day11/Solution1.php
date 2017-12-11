@@ -4,7 +4,7 @@ $input = array();
 $lines = file('input.txt');
 $n=0;
 $s=0;
-$e=0
+$e=0;
 $w=0;
 
 foreach($lines as $singleLine){
@@ -42,6 +42,10 @@ for($i=0;$i<count($input);$i++){
 	
 }
 
-echo (abs($n - $s) + abs($e - $w));
-
+if(abs($e - $w) > abs($n - $s)){
+	echo (abs($e - $w)*2);
+}
+else{
+	echo (abs($n - $s) + abs($e - $w));
+}
 ?>
