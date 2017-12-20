@@ -3,7 +3,7 @@
 $posit = array();
 $veloc = array();
 $accel = array();
-$lines = file('C:\php72\scripts\AOC2017\AoC2017\Day20\input.txt');
+$lines = file('input.txt');
 
 foreach($lines as $singleLine){
 	$temp = array_map('trim',explode(",",$singleLine));
@@ -15,6 +15,9 @@ foreach($lines as $singleLine){
 	array_push($accel,$acceleration);
 }
 $runs=0;
+//Arbitrary number of runs. Would need to ensure that every particle is getting
+//further away from each other particle on every loop to ensure no more collisions
+//are possible
 while($runs < 1000){
 	for($i=0;$i<count($posit);$i++){
 		$temp=false;
