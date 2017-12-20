@@ -30,7 +30,7 @@ for($i=0;$i<count($accel);$i++){
 }
 for($i=0;$i<count($minAinds);$i++){
 	echo (abs($veloc[$minAinds[$i]][0]) + abs($accel[$minAinds[$i]][1]) + abs($accel[$minAinds[$i]][2])) . " " . $minAinds[$i];
-	echo "<br>";//index with the smallest velocity will be closest to 0,0,0
+	echo "\n";//index with the smallest velocity will be closest to 0,0,0
 }
 
 ?>
